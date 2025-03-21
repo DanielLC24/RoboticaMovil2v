@@ -4,6 +4,12 @@
 
 @section('contenido')
 <style>
+.text-shadow-glow {
+    text-shadow: 0 0 10px rgba(230, 243, 255, 0.5);
+}
+.card-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
 @keyframes gradient-x {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -138,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <!-- Hero Section with Clean Design -->
-<div class="relative isolate overflow-hidden bg-gradient-to-br from-[#0B0B3B] via-[#1A1A8C] to-[#4B0082] min-h-screen animate-gradient-x">
+<div class="relative isolate overflow-hidden bg-gradient-to-br from-[#000033] via-[#000066] to-[#330066] min-h-screen animate-gradient-x">
     <div id="particles-js"></div>
     <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z" fill="rgba(255,255,255,0.07)"%3E%3C/path%3E%3C/svg%3E')] opacity-25"></div>
     
@@ -149,8 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold leading-6 text-blue-900">Últimas Novedades</span>
                 </a>
             </div>
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">Robótica Móvil <span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Descubre el futuro de la robótica móvil. Exploramos las últimas tecnologías en robots autónomos, sistemas de navegación y control inteligente.</p>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-[#E6F3FF] sm:text-6xl animate-fade-in text-shadow-glow">Robótica Móvil <span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
+            <p class="mt-6 text-lg leading-8 text-[#B3E0FF]">Descubre el futuro de la robótica móvil. Exploramos las últimas tecnologías en robots autónomos, sistemas de navegación y control inteligente.</p>
             <div class="mt-10 flex items-center gap-x-6 animate-fade-in-up">
                 <a href="#" class="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors duration-300">
                     Comenzar Ahora
@@ -164,17 +170,17 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- Feature Section with Clean Cards -->
-<div class="relative bg-[#0A0A0A] py-24 sm:py-32">
+<div class="relative bg-[#000022] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
             <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Tecnología Avanzada</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Todo lo que necesitas sobre <span class="text-[#00FFFF]">robótica móvil</span></p>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Explora nuestras áreas de especialización en robótica móvil y descubre cómo estamos transformando el futuro de la automatización.</p>
+            <p class="mt-6 text-lg leading-8 text-[#B3E0FF]">Explora nuestras áreas de especialización en robótica móvil y descubre cómo estamos transformando el futuro de la automatización.</p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                 <!-- Feature Card 1 -->
-                <div class="bg-[#1E1E1E] shadow-lg rounded-lg p-8 border border-[#333] hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
+                <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
                         <i class="fa-solid fa-robot text-[#00FF00] text-2xl"></i>
                         Robots Autónomos
@@ -185,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <!-- Feature Card 2 -->
-                <div class="bg-[#1E1E1E] shadow-lg rounded-lg p-8 border border-[#333] hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
+                <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
                         <i class="fa-solid fa-microchip text-[#00FF00] text-2xl"></i>
                         Sistemas de Control
@@ -196,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <!-- Feature Card 3 -->
-                <div class="bg-[#1E1E1E] shadow-lg rounded-lg p-8 border border-[#333] hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300">
+                <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
                         <i class="fa-solid fa-code text-[#00FF00] text-2xl"></i>
                         Programación Avanzada
@@ -211,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- Projects Section with Clean Design -->
-<div class="relative bg-[#0F0F0F] py-24 sm:py-32">
+<div class="relative bg-[#000044] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Proyectos Destacados</h2>
@@ -219,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <!-- Project Card 1 -->
-            <article class="bg-[#1E1E1E] rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
+            <article class="bg-[#001133] rounded-lg shadow-xl overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 1" class="absolute inset-0 h-full w-full object-cover">
                 </div>
@@ -237,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </article>
 
             <!-- Project Card 2 -->
-            <article class="bg-[#1E1E1E] rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
+            <article class="bg-[#001133] rounded-lg shadow-xl overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 2" class="absolute inset-0 h-full w-full object-cover">
                 </div>
@@ -255,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </article>
 
             <!-- Project Card 3 -->
-            <article class="bg-[#1E1E1E] rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
+            <article class="bg-[#001133] rounded-lg shadow-xl overflow-hidden border border-transparent hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 3" class="absolute inset-0 h-full w-full object-cover">
                 </div>
