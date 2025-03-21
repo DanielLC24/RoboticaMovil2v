@@ -3,9 +3,41 @@
 @section('titulo', 'Inicio - Robótica Móvil')
 
 @section('contenido')
+<style>
+@keyframes gradient-x {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+}
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 <!-- Hero Section with Clean Design -->
-<div class="relative isolate overflow-hidden bg-navy-900 min-h-screen">
-    <div class="absolute inset-0 bg-[#001233] opacity-95"></div>
+<div class="relative isolate overflow-hidden bg-gradient-to-br from-[#001233] via-[#001845] to-[#002855] min-h-screen animate-gradient-x">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z" fill="rgba(255,255,255,0.07)"%3E%3C/path%3E%3C/svg%3E')] opacity-25"></div>
     
     <div class="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-15">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
@@ -14,9 +46,9 @@
                     <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold leading-6 text-blue-900">Últimas Novedades</span>
                 </a>
             </div>
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Robótica Móvil <span id="typed-title" class="text-blue-600">Avanzada</span></h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fade-in">Robótica Móvil <span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
             <p class="mt-6 text-lg leading-8 text-gray-300">Descubre el futuro de la robótica móvil. Exploramos las últimas tecnologías en robots autónomos, sistemas de navegación y control inteligente.</p>
-            <div class="mt-10 flex items-center gap-x-6">
+            <div class="mt-10 flex items-center gap-x-6 animate-fade-in-up">
                 <a href="#" class="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors duration-300">
                     Comenzar Ahora
                 </a>
@@ -84,7 +116,7 @@
         </div>
         <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <!-- Project Card 1 -->
-            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 1" class="absolute inset-0 h-full w-full object-cover">
                 </div>
@@ -102,7 +134,7 @@
             </article>
 
             <!-- Project Card 2 -->
-            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 2" class="absolute inset-0 h-full w-full object-cover">
                 </div>
@@ -120,7 +152,7 @@
             </article>
 
             <!-- Project Card 3 -->
-            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden border border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="relative aspect-[16/9]">
                     <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Project 3" class="absolute inset-0 h-full w-full object-cover">
                 </div>
