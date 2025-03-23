@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Feature Card 1 -->
                 <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
-                        <i class="fa-solid fa-robot text-[#00FF00] text-2xl"></i>
+                        <i class="fa-solid fa-robot text-[#B388FF] text-2xl"></i>
                         Robots Autónomos
                     </dt>
                     <dd class="mt-4 text-base leading-7 text-gray-300">
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Feature Card 2 -->
                 <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
-                        <i class="fa-solid fa-microchip text-[#00FF00] text-2xl"></i>
+                        <i class="fa-solid fa-microchip text-[#B388FF] text-2xl"></i>
                         Sistemas de Control
                     </dt>
                     <dd class="mt-4 text-base leading-7 text-gray-300">
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Feature Card 3 -->
                 <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300">
                     <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-[#00FFFF]">
-                        <i class="fa-solid fa-code text-[#00FF00] text-2xl"></i>
+                        <i class="fa-solid fa-code text-[#B388FF] text-2xl"></i>
                         Programación Avanzada
                     </dt>
                     <dd class="mt-4 text-base leading-7 text-gray-300">

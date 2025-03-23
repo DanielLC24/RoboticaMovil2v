@@ -56,54 +56,54 @@
     @yield('contenido')
 </main>
 
-<footer class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-950 text-white relative overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[radial-gradient(circle_800px_at_100%_200px,rgba(29,78,216,0.1),transparent)] before:animate-pulse">
+<footer class="bg-gradient-to-br from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white relative overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[radial-gradient(circle_800px_at_100%_200px,rgba(29,78,216,0.05),transparent)] before:animate-pulse">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold">Robótica Móvil</h3>
-                <p class="text-sm text-gray-300">Centro de Investigación en Robótica Móvil y Sistemas Autónomos</p>
-                <div class="flex space-x-4 animate-float"
-                    <a href="#" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-github text-xl"></i></a>
+                <h3 class="text-lg font-semibold text-blue-200">Robótica Móvil</h3>
+                <p class="text-sm text-gray-400">Centro de Investigación en Robótica Móvil y Sistemas Autónomos</p>
+                <div class="flex space-x-4 animate-float">
+                    <a href="#" class="text-gray-400 hover:text-blue-300 transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-300 transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-300 transition-all duration-300 hover:scale-110 transform hover:rotate-6"><i class="fab fa-github text-xl"></i></a>
                 </div>
             </div>
             <div class="space-y-4">
-                <h3 class="text-sm font-semibold">Enlaces Institucionales</h3>
+                <h3 class="text-sm font-semibold text-blue-200">Enlaces Institucionales</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ route('inicio') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="{{ route('nosotros') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Sobre Nosotros</a></li>
-                    <li><a href="{{ route('proyectos') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+                    <li><a href="{{ route('inicio') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Inicio</a></li>
+                    <li><a href="{{ route('nosotros') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Sobre Nosotros</a></li>
+                    <li><a href="{{ route('proyectos') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Proyectos</a></li>
                 </ul>
             </div>
             <div class="space-y-4">
-                <h3 class="text-sm font-semibold">Recursos</h3>
+                <h3 class="text-sm font-semibold text-blue-200">Recursos</h3>
                 <ul class="space-y-3">
-                    <li><a href="{{ route('publicaciones') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Publicaciones</a></li>
-                    <li><a href="{{ route('eventos') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Eventos</a></li>
-                    <li><a href="{{ route('colaboraciones') }}" class="text-sm text-gray-300 hover:text-white transition-colors">Colaboraciones</a></li>
+                    <li><a href="{{ route('publicaciones') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Publicaciones</a></li>
+                    <li><a href="{{ route('eventos') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Eventos</a></li>
+                    <li><a href="{{ route('colaboraciones') }}" class="text-sm text-gray-400 hover:text-blue-300 transition-colors">Colaboraciones</a></li>
                 </ul>
             </div>
             <div class="space-y-4">
-                <h3 class="text-sm font-semibold">Contacto</h3>
+                <h3 class="text-sm font-semibold text-blue-200">Contacto</h3>
                 <ul class="space-y-3">
-                    <li class="text-sm text-gray-300 flex items-center group hover:text-white transition-all duration-300">
+                    <li class="text-sm text-gray-400 flex items-center group hover:text-blue-300 transition-all duration-300">
                         <i class="fas fa-envelope mr-2 group-hover:scale-110 transition-transform duration-300 text-blue-400"></i>
                         info@roboticamovil.com
                     </li>
-                    <li class="text-sm text-gray-300 flex items-center group hover:text-white transition-all duration-300">
+                    <li class="text-sm text-gray-400 flex items-center group hover:text-blue-300 transition-all duration-300">
                         <i class="fas fa-phone mr-2 group-hover:scale-110 transition-transform duration-300 text-blue-400"></i>
                         +52 222 222 2222
                     </li>
-                    <li class="text-sm text-gray-300 flex items-center group hover:text-white transition-all duration-300">
+                    <li class="text-sm text-gray-400 flex items-center group hover:text-blue-300 transition-all duration-300">
                         <i class="fas fa-map-marker-alt mr-2 group-hover:scale-110 transition-transform duration-300 text-blue-400"></i>
                         Puebla, México
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="mt-8 pt-8 border-t border-blue-900">
-            <p class="text-sm text-gray-300 text-center">© 2024 Centro de Investigación en Robótica Móvil. Todos los derechos reservados.</p>
+        <div class="mt-8 pt-8 border-t border-blue-800/30">
+            <p class="text-sm text-gray-400 text-center">© 2024 Centro de Investigación en Robótica Móvil. Todos los derechos reservados.</p>
         </div>
     </div>
 <style>
