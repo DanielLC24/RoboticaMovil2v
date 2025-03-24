@@ -23,16 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener("DOMContentLoaded", () => {
         const items = document.querySelectorAll(".carousel-item");
-        let currentIndex = 1;
+        let currentIndex = 0;
 
         function updateCarousel() {
             items.forEach((item, index) => {
                 if (index === currentIndex) {
-                    item.classList.remove("scale-75", "w-1/3");
-                    item.classList.add("scale-100", "w-1/2");
+                    item.classList.remove("hidden");
                 } else {
-                    item.classList.remove("scale-100", "w-1/2");
-                    item.classList.add("scale-75", "w-1/3");
+                    item.classList.add("hidden");
                 }
             });
         }
