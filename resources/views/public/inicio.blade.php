@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold leading-6 text-blue-900">Últimas Novedades</span>
                 </a>
             </div>
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-[#E6F3FF] sm:text-6xl animate-fade-in text-shadow-glow">Robótica Móvil <span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-[#E6F3FF] sm:text-6xl animate-fade-in text-shadow-glow">Robótica Móvil version 3<span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
             <p class="mt-6 text-lg leading-8 text-[#B3E0FF]">Descubre el futuro de la robótica móvil. Exploramos las últimas tecnologías en robots autónomos, sistemas de navegación y control inteligente.</p>
             <div class="mt-10 flex items-center gap-x-6 animate-fade-in-up">
                 <a href="#" class="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors duration-300">
