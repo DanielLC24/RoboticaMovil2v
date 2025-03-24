@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
             <div class="mt-24 sm:mt-32 lg:mt-16">
                 <a href="#" class="inline-flex items-center space-x-6">
-                    <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold leading-6 text-blue-900">Últimas Novedades</span>
+                    <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold leading-6 text-blue-900">Últimas Novedades 66666666666666</span>
                 </a>
             </div>
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-[#E6F3FF] sm:text-6xl animate-fade-in text-shadow-glow">version 3<span id="typed-title" class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-pulse">Avanzada</span></h1>
