@@ -3,9 +3,48 @@
 @section('titulo', 'Proyectos - Robótica Móvil')
 
 @section('contenido')
+
+<style>
+.glow-text {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 <!-- Hero Section -->
-<div class="relative bg-[#001233] py-12 sm:py-20 md:py-32">
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-950 to-blue-900 opacity-80"></div>
+<div class="relative bg-gradient-to-br from-[#000033] via-[#000066] to-[#330066] animate-gradient py-24 sm:py-36 overflow-hidden">  
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl"></div>
+        <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl"></div>
+    </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 sm:mb-6">Proyectos de Investigación</h1>
