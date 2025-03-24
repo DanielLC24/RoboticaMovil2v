@@ -19,3 +19,31 @@ document.addEventListener('DOMContentLoaded', function () {
     })
         
     });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".carousel-item");
+        let currentIndex = 1;
+
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                if (index === currentIndex) {
+                    item.classList.remove("scale-75", "w-1/3");
+                    item.classList.add("scale-100", "w-1/2");
+                } else {
+                    item.classList.remove("scale-100", "w-1/2");
+                    item.classList.add("scale-75", "w-1/3");
+                }
+            });
+        }
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+    });

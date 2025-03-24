@@ -41,26 +41,121 @@
 </style>
 <!-- Hero Section -->
 <div class="relative bg-gradient-to-br from-[#000033] via-[#000066] to-[#330066] animate-gradient py-24 sm:py-36 overflow-hidden">  
-<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
         <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl"></div>
         <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl"></div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 sm:mb-6">Proyectos de Investigación</h1>
-            <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-blue-100">Desarrollando soluciones innovadoras en robótica móvil que definen el futuro de la tecnología autónoma.</p>
+        <div class="w-full text-dark-navy flex flex-col relative bg-blue md:p-24 p-12 text-off-white">
+            <h1 class="text-5xl md:text-6xl lg:text-9xl font-bold tracking-tight text-white mb-3"> <span class="text-blue-400">Nuestros</span></h1>
+            <h1 class="text-5xl md:text-6xl lg:text-9xl font-bold tracking-tight text-white mb-6"> proyectos</h1>
+        
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-blue-100 max-w-2xl">Desarrollando soluciones innovadoras en robótica móvil que definen el futuro de la tecnología autónoma.</p>
         </div>
     </div>
 </div>
 
-<!-- Project Categories -->
-<div class="bg-white py-6 sm:py-8 border-b border-gray-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
-            <button class="px-4 py-2 text-sm font-medium text-blue-900 bg-blue-50 rounded-md hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500">Todos</button>
-            <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-blue-900 hover:bg-blue-50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">En Desarrollo</button>
-            <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-blue-900 hover:bg-blue-50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">Completados</button>
-            <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-blue-900 hover:bg-blue-50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">Próximamente</button>
+
+<!-- Featured Projects Section -->
+<div class="bg-[#000044] py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px=15">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-2">DESTACADOS</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <!-- Robotics Projects Carousel -->
+        <div class="mb-16">
+    <h3 class="text-2xl font-semibold text-blue-400 mb-6 text-center">Proyectos de Robótica</h3>
+    <div class="relative overflow-hidden w-full flex justify-center">
+        <div class="flex items-center relative w-full max-w-4xl">
+            <!-- Left Arrow Button -->
+            <button id="prevBtn" class="absolute left-0 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            
+            <!-- Carousel Items -->
+            <div id="carousel" class="flex space-x-6 overflow-hidden w-full justify-center items-center">
+                <div class="carousel-item w-1/3 transition-all duration-500 transform scale-75">
+                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Asistente" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Asistente Hospitalario</h4>
+                        <p class="text-blue-200 text-center">Robot autónomo diseñado para asistir en entornos hospitalarios.</p>
+                    </div>
+                </div>
+                <div class="carousel-item w-1/2 transition-all duration-500 transform scale-100">
+                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Industrial" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Industrial Colaborativo</h4>
+                        <p class="text-blue-200 text-center">Sistema robótico para automatización de procesos industriales.</p>
+                    </div>
+                </div>
+                <div class="carousel-item w-1/3 transition-all duration-500 transform scale-75">
+                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Explorador" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Explorador Terrestre</h4>
+                        <p class="text-blue-200 text-center">Robot todo terreno para exploración y mapeo de entornos desconocidos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Arrow Button -->
+            <button id="nextBtn" class="absolute right-0 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+    
+        <!-- Web Development Projects Carousel -->
+        <div>
+            <h3 class="text-2xl font-semibold text-blue-400 mb-6">Proyectos de Desarrollo Web</h3>
+            <div class="relative overflow-hidden">
+                <div class="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
+                    <!-- Sistema de Gestión IoT -->
+                    <div class="flex-none w-full sm:w-1/2 lg:w-1/3">
+                        <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                            <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Sistema de Gestión" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-semibold text-white mb-2">Sistema de Gestión IoT</h4>
+                            <p class="text-blue-200 mb-4">Plataforma web para monitoreo y control de dispositivos IoT.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">Laravel</span>
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Dashboard Analytics -->
+                    <div class="flex-none w-full sm:w-1/2 lg:w-1/3">
+                        <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                            <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Dashboard Analytics" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-semibold text-white mb-2">Dashboard Analytics</h4>
+                            <p class="text-blue-200 mb-4">Panel de control para análisis de datos en tiempo real.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">React</span>
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Plataforma E-learning -->
+                    <div class="flex-none w-full sm:w-1/2 lg:w-1/3">
+                        <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
+                            <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Plataforma E-learning" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-semibold text-white mb-2">Plataforma E-learning</h4>
+                            <p class="text-blue-200 mb-4">Sistema de aprendizaje en línea con contenido interactivo.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">Angular</span>
+                                <span class="inline-flex items-center rounded-full bg-blue-900/50 px-2.5 py-0.5 text-xs font-medium text-blue-300">Django</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -119,7 +214,61 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Project Card 4 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-blue-500 border border-transparent">
+                <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Manipulador" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Completado</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Robot Manipulador Inteligente</h3>
+                    <p class="text-gray-600 mb-4">Brazo robótico con sistema de visión artificial para manipulación precisa de objetos.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">OpenCV</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">ROS</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Control</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-blue-500 border border-transparent">
+                <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Sistema Multi-Robot" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">En Desarrollo</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Sistema Multi-Robot Colaborativo</h3>
+                    <p class="text-gray-600 mb-4">Plataforma de coordinación para múltiples robots en tareas de logística y transporte.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Swarm</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">AI</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Coordinación</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-blue-500 border border-transparent">
+                <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Asistente Quirúrgico" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">Próximamente</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Asistente Quirúrgico Robótico</h3>
+                    <p class="text-gray-600 mb-4">Robot asistente para procedimientos quirúrgicos de alta precisión con control remoto.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Medical</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Precision</span>
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-700">Teleoperation</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+<script src="app.js"></script>
 @endsection
