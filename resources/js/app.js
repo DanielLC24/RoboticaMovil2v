@@ -20,28 +20,50 @@ document.addEventListener('DOMContentLoaded', function () {
         
     });
 
+// Carousel Animation
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel");
+    if (!carousel) return;
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const items = document.querySelectorAll(".carousel-item");
-        let currentIndex = 0;
+    const items = carousel.querySelectorAll(".carousel-item");
+    let currentIndex = 0;
 
-        function updateCarousel() {
-            items.forEach((item, index) => {
-                if (index === currentIndex) {
-                    item.classList.remove("hidden");
-                } else {
-                    item.classList.add("hidden");
-                }
-            });
-        }
-
-        document.getElementById("prevBtn").addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
+    function updateCarousel(newIndex) {
+        items.forEach((item, index) => {
+            if (index === newIndex) {
+                item.classList.remove("opacity-0", "translate-x-full", "-translate-x-full");
+                item.classList.add("opacity-100", "translate-x-0");
+            } else if (index < newIndex) {
+                item.classList.remove("opacity-0", "translate-x-full", "translate-x-0");
+                item.classList.add("opacity-0", "-translate-x-full");
+            } else {
+                item.classList.remove("opacity-100", "translate-x-0", "-translate-x-full");
+                item.classList.add("opacity-0", "translate-x-full");
+            }
         });
+        currentIndex = newIndex;
+    }
 
-        document.getElementById("nextBtn").addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            const newIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel(newIndex);
         });
-    });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            const newIndex = (currentIndex + 1) % items.length;
+            updateCarousel(newIndex);
+        });
+    }
+
+    // Auto-advance the carousel every 5 seconds
+    setInterval(() => {
+        const newIndex = (currentIndex + 1) % items.length;
+        updateCarousel(newIndex);
+    }, 5000);
+});

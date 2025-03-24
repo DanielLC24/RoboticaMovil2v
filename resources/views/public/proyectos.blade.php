@@ -65,51 +65,56 @@
         </div>
 
         <!-- Robotics Projects Carousel -->
-        <div class="mb-16">
-    <h3 class="text-2xl font-semibold text-blue-400 mb-6 text-center">Proyectos de Robótica</h3>
-    <div class="relative overflow-hidden w-full flex justify-center">
-        <div class="flex items-center relative w-full max-w-lg">
+            <div class="mb-16">
+        <h3 class="text-2xl font-semibold text-blue-400 mb-6 text-center">Proyectos de Robótica</h3>
+        <div class="relative">
             <!-- Left Arrow Button -->
-            <button id="prevBtn" class="absolute left-0 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
+            <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
             
-            <!-- Carousel Items -->
-            <div id="carousel" class="w-full flex justify-center items-center">
-                <div class="carousel-item w-full transition-all duration-500 transform scale-100">
-                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
-                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Asistente" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Asistente Hospitalario</h4>
-                        <p class="text-blue-200 text-center">Robot autónomo diseñado para asistir en entornos hospitalarios.</p>
-                    </div>
-                </div>
-                <div class="carousel-item hidden w-full transition-all duration-500 transform scale-100">
-                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
-                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Industrial" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Industrial Colaborativo</h4>
-                        <p class="text-blue-200 text-center">Sistema robótico para automatización de procesos industriales.</p>
-                    </div>
-                </div>
-                <div class="carousel-item hidden w-full transition-all duration-500 transform scale-100">
-                    <div class="bg-[#001133] rounded-lg shadow-xl p-6 border border-blue-900 hover:border-blue-500 transition-all duration-300">
-                        <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="Robot Explorador" class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-semibold text-white mb-2 text-center">Robot Explorador Terrestre</h4>
-                        <p class="text-blue-200 text-center">Robot todo terreno para exploración y mapeo de entornos desconocidos.</p>
-                    </div>
+            <!-- Carousel Container -->
+            <div id="carousel" class="overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-4000 ease-in-out">
+                    @php
+                        $roboticsProjects = [
+                            ['title' => 'Robot Asistente Hospitalario', 'description' => 'Robot autónomo diseñado para asistir en entornos hospitalarios.'],
+                            ['title' => 'Robot Industrial Colaborativo', 'description' => 'Sistema robótico para automatización de procesos industriales.'],
+                            ['title' => 'Robot Explorador Terrestre', 'description' => 'Robot todo terreno para exploración y mapeo de entornos desconocidos.']
+                        ];
+                    @endphp
+
+                    @foreach($roboticsProjects as $index => $project)
+                        <div class="carousel-item w-full flex-shrink-0 opacity-0 translate-x-full transition-all duration-1000 {{ $index === 0 ? 'opacity-100 translate-x-0' : '' }}">
+                            <div class="bg-[#001133] rounded-lg shadow-xl p-8 border border-blue-900 hover:border-blue-500 mx-4">
+                                <img src="{{ asset('image/ai-generated-8124241_1280.jpg') }}" alt="{{ $project['title'] }}" class="w-full h-64 object-cover rounded-lg mb-6">
+                                <h4 class="text-2xl font-semibold text-white mb-4 text-center">{{ $project['title'] }}</h4>
+                                <p class="text-blue-200 text-center text-lg">{{ $project['description'] }}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-            
+
             <!-- Right Arrow Button -->
-            <button id="nextBtn" class="absolute right-0 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
+            <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
         </div>
+                
+                <!-- Right Arrow Button -->
+                <button id="nextBtn" class="absolute right-0 z-10 bg-blue-900/50 hover:bg-blue-900/70 text-white rounded-full p-2 transition-all duration-300 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
-</div>
     
         <!-- Web Development Projects Carousel -->
         <div>
@@ -270,5 +275,21 @@
 </div>
 
 
-<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script>
+$(function() {
+    $("#news-slider").owlCarousel({
+        items :4,
+        itemsDesktop:[1199,3],
+        itemsDesktopSmall:[980,2],
+        itemsMobile : [600,1],
+        navigation:true,
+        navigationText:["",""],
+        pagination:true,
+        autoPlay:true,
+        autoplayTimeout:1000
+    });
+});
+        </script>
 @endsection
