@@ -248,4 +248,192 @@
         </div>
     </div>
 </div>
+
+<!-- Calendario de Eventos Section -->
+<div class="bg-[#000033] py-24 sm:py-32 shadow-inner">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Planifica tu Asistencia</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Calendario de Eventos</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Consulta nuestro calendario completo y organiza tu agenda para no perderte ninguna actividad</p>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="bg-[#001133] shadow-xl rounded-lg overflow-hidden border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 animate-fade-in-up">
+            <div class="p-6 border-b border-[#004466]">
+                <div class="flex justify-between items-center">
+                    <button class="text-[#00FFFF] hover:text-cyan-300 transition-colors">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 class="text-xl font-semibold text-white">Enero 2024</h3>
+                    <button class="text-[#00FFFF] hover:text-cyan-300 transition-colors">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <!-- Days of Week -->
+                <div class="grid grid-cols-7 gap-2 mb-4">
+                    <div class="text-center text-sm font-medium text-cyan-400">Dom</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Lun</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Mar</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Mié</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Jue</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Vie</div>
+                    <div class="text-center text-sm font-medium text-cyan-400">Sáb</div>
+                </div>
+                <!-- Calendar Grid -->
+                <div class="grid grid-cols-7 gap-2">
+                    <!-- Previous Month -->
+                    <div class="text-center py-2 text-gray-500">31</div>
+                    <!-- Current Month -->
+                    <div class="text-center py-2 text-gray-300">1</div>
+                    <div class="text-center py-2 text-gray-300">2</div>
+                    <div class="text-center py-2 text-gray-300">3</div>
+                    <div class="text-center py-2 text-gray-300">4</div>
+                    <div class="text-center py-2 text-gray-300">5</div>
+                    <div class="text-center py-2 text-gray-300">6</div>
+                    <div class="text-center py-2 text-gray-300">7</div>
+                    <div class="text-center py-2 text-gray-300">8</div>
+                    <div class="text-center py-2 text-gray-300">9</div>
+                    <div class="text-center py-2 text-gray-300">10</div>
+                    <div class="text-center py-2 text-gray-300">11</div>
+                    <div class="text-center py-2 text-gray-300">12</div>
+                    <div class="text-center py-2 text-gray-300">13</div>
+                    <div class="text-center py-2 text-gray-300">14</div>
+                    <div class="text-center py-2 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-bold relative group">
+                        15
+                        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-[#001133] text-[#00FFFF] text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Simposio Internacional</span>
+                    </div>
+                    <div class="text-center py-2 text-gray-300">16</div>
+                    <div class="text-center py-2 text-gray-300">17</div>
+                    <div class="text-center py-2 text-gray-300">18</div>
+                    <div class="text-center py-2 text-gray-300">19</div>
+                    <div class="text-center py-2 text-gray-300">20</div>
+                    <div class="text-center py-2 text-gray-300">21</div>
+                    <div class="text-center py-2 text-gray-300">22</div>
+                    <div class="text-center py-2 text-gray-300">23</div>
+                    <div class="text-center py-2 text-gray-300">24</div>
+                    <div class="text-center py-2 text-gray-300">25</div>
+                    <div class="text-center py-2 text-gray-300">26</div>
+                    <div class="text-center py-2 text-gray-300">27</div>
+                    <div class="text-center py-2 text-gray-300">28</div>
+                    <div class="text-center py-2 text-gray-300">29</div>
+                    <div class="text-center py-2 text-gray-300">30</div>
+                    <div class="text-center py-2 text-gray-300">31</div>
+                    <!-- Next Month -->
+                    <div class="text-center py-2 text-gray-500">1</div>
+                    <div class="text-center py-2 text-gray-500">2</div>
+                    <div class="text-center py-2 text-gray-500">3</div>
+                </div>
+            </div>
+            <div class="p-6 border-t border-[#004466] flex justify-center">
+                <a href="#" class="inline-flex items-center text-[#00FFFF] hover:text-cyan-300 transition-colors">
+                    Ver todos los eventos <i class="fas fa-calendar-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonios Section -->
+<div class="bg-[#000055] py-24 sm:py-32 shadow-inner relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjkyNTI0IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-10"></div>
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-1/2 -left-24 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl"></div>
+    </div>
+    
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Experiencias Compartidas</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Testimonios de Participantes</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Descubre lo que opinan quienes han asistido a nuestros eventos</p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-[#001133]/80 backdrop-blur-sm shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 animate-fade-in-up relative overflow-hidden">
+                <div class="absolute -top-6 -right-6 w-12 h-12 text-5xl text-[#00FFFF]/20">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="mb-6">
+                    <div class="flex items-center space-x-1 mb-1">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <p class="text-cyan-100 mb-6 italic">"El Simposio Internacional de Robótica superó todas mis expectativas. Las conferencias fueron de altísimo nivel y tuve la oportunidad de establecer contactos con investigadores de todo el mundo."</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">MR</span>
+                    </div>
+                    <div>
+                        <h4 class="text-[#00FFFF] font-semibold">Dr. Miguel Rodríguez</h4>
+                        <p class="text-sm text-cyan-200">Investigador, Universidad de Barcelona</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-[#001133]/80 backdrop-blur-sm shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 animate-fade-in-up relative overflow-hidden" style="animation-delay: 0.2s;">
+                <div class="absolute -top-6 -right-6 w-12 h-12 text-5xl text-[#00FFFF]/20">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="mb-6">
+                    <div class="flex items-center space-x-1 mb-1">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <p class="text-cyan-100 mb-6 italic">"El taller de programación de robots fue una experiencia increíble. Los instructores eran expertos en la materia y el enfoque práctico me permitió aplicar inmediatamente lo aprendido en mi proyecto de investigación."</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">LG</span>
+                    </div>
+                    <div>
+                        <h4 class="text-[#00FFFF] font-semibold">Laura Gómez</h4>
+                        <p class="text-sm text-cyan-200">Estudiante de Doctorado, UNAM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-[#001133]/80 backdrop-blur-sm shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 animate-fade-in-up relative overflow-hidden" style="animation-delay: 0.4s;">
+                <div class="absolute -top-6 -right-6 w-12 h-12 text-5xl text-[#00FFFF]/20">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="mb-6">
+                    <div class="flex items-center space-x-1 mb-1">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+                <p class="text-cyan-100 mb-6 italic">"El Hackathon de Robótica fue una experiencia transformadora. La energía del evento, la calidad de los mentores y la oportunidad de trabajar con tecnología de punta hicieron que valiera cada minuto de las 48 horas."</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">JM</span>
+                    </div>
+                    <div>
+                        <h4 class="text-[#00FFFF] font-semibold">Javier Méndez</h4>
+                        <p class="text-sm text-cyan-200">Estudiante de Ingeniería, ITESM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
