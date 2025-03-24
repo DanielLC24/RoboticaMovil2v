@@ -3,54 +3,90 @@
 @section('titulo', 'Nosotros - Robótica Móvil')
 
 @section('contenido')
-<!-- Hero Section -->
-<div class="relative bg-[#001233] py-24 sm:py-36 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-950 to-blue-900 opacity-80"></div>
+<style>
+.glow-text {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+
+<!-- Hero Section with Animated Gradient -->
+<div class="relative bg-gradient-to-br from-[#000033] via-[#000066] to-[#330066] animate-gradient py-24 sm:py-36 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjkyNTI0IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-10"></div>
     <!-- Decorative elements -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
         <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl"></div>
         <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-600 rounded-full filter blur-3xl"></div>
     </div>
     <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6">Centro de Investigación en<br>Robótica Móvil</h1>
-            <p class="mt-6 text-lg leading-8 text-blue-100 max-w-2xl mx-auto">Liderando la innovación en robótica móvil y sistemas autónomos desde hace más de una década, estableciendo estándares de excelencia en investigación y desarrollo tecnológico.</p>
+        <div class="mx-auto max-w-3xl text-center animate-fade-in">
+            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 glow-text">Centro de Investigación en<br>Robótica Móvil</h1>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Liderando la innovación en robótica móvil y sistemas autónomos desde hace más de una década, estableciendo estándares de excelencia en investigación y desarrollo tecnológico.</p>
         </div>
     </div>
 </div>
 
 <!-- Mission and Vision Section -->
-<div class="bg-white py-24 sm:py-32">
+<div class="bg-[#000022] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-base font-semibold leading-7 text-blue-600">Nuestra Identidad</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Misión y Visión</p>
-            <div class="w-16 h-1 bg-blue-600 mx-auto my-4"></div>
+        <div class="text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Nuestra Identidad</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Misión y Visión</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <!-- Mission Statement -->
-            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 flex flex-col h-full animate-fade-in-up">
                 <div class="mx-auto w-full text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 mb-6">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 mb-6 transform hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-robot text-2xl text-white"></i>
                     </div>
-                    <h2 class="text-xl font-semibold leading-7 text-blue-900">Nuestra Misión</h2>
-                    <p class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Excelencia en Investigación y Desarrollo</p>
-                    <div class="w-12 h-1 bg-blue-600 mx-auto my-4"></div>
-                    <p class="mt-6 text-lg leading-8 text-gray-700">Nos dedicamos a la investigación avanzada en robótica móvil, formando la próxima generación de expertos y desarrollando soluciones tecnológicas que transforman la industria.</p>
+                    <h2 class="text-xl font-semibold leading-7 text-[#00FFFF]">Nuestra Misión</h2>
+                    <p class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">Excelencia en Investigación y Desarrollo</p>
+                    <div class="w-12 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+                    <p class="mt-6 text-lg leading-8 text-cyan-100">Nos dedicamos a la investigación avanzada en robótica móvil, formando la próxima generación de expertos y desarrollando soluciones tecnológicas que transforman la industria.</p>
                 </div>
             </div>
 
             <!-- Vision Statement -->
-            <div class="bg-gradient-to-br from-blue-700 to-blue-900 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+            <div class="bg-[#000055] shadow-lg rounded-lg p-8 border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-cyan-500/20 hover:shadow-xl transform hover:-translate-y-1 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.2s;">
                 <div class="mx-auto w-full text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-200 mb-6">
-                        <i class="fas fa-microchip text-2xl text-blue-800"></i>
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 mb-6 transform hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-microchip text-2xl text-white"></i>
                     </div>
-                    <h2 class="text-xl font-semibold leading-7 text-blue-100">Nuestra Visión</h2>
-                    <p class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">Liderando el Futuro de la Robótica</p>
-                    <div class="w-12 h-1 bg-blue-200 mx-auto my-4"></div>
-                    <p class="mt-6 text-lg leading-8 text-blue-100">Aspiramos a ser un referente mundial en innovación robótica, impulsando avances tecnológicos que transformen la sociedad y mejoren la vida de las personas a través de soluciones robóticas inteligentes y sostenibles.</p>
+                    <h2 class="text-xl font-semibold leading-7 text-cyan-300">Nuestra Visión</h2>
+                    <p class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl glow-text">Liderando el Futuro de la Robótica</p>
+                    <div class="w-12 h-1 bg-cyan-400 mx-auto my-4"></div>
+                    <p class="mt-6 text-lg leading-8 text-cyan-100">Aspiramos a ser un referente mundial en innovación robótica, impulsando avances tecnológicos que transformen la sociedad y mejoren la vida de las personas a través de soluciones robóticas inteligentes y sostenibles.</p>
                 </div>
             </div>
         </div>
@@ -58,68 +94,68 @@
 </div>
 
 <!-- Research Areas Section -->
-<div class="bg-gradient-to-b from-gray-50 to-gray-100 py-24 sm:py-32">
+<div class="bg-[#000044] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center mb-16">
-            <h2 class="text-base font-semibold leading-7 text-blue-600">Especialización</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Áreas de Investigación</p>
-            <div class="w-16 h-1 bg-blue-600 mx-auto my-4"></div>
-            <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Nuestras líneas de investigación principales están enfocadas en el desarrollo de tecnologías robóticas avanzadas</p>
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Especialización</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Áreas de Investigación</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Nuestras líneas de investigación principales están enfocadas en el desarrollo de tecnologías robóticas avanzadas</p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-blue-600 transition-all duration-300 flex flex-col h-full">
-                <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 flex flex-col h-full animate-fade-in-up">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mb-6 mx-auto transform hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-robot text-2xl text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Navegación Autónoma</h3>
-                <p class="text-gray-600 text-center">Desarrollo de sistemas avanzados de navegación y mapeo para entornos complejos y dinámicos.</p>
+                <h3 class="text-xl font-bold text-[#00FFFF] mb-3 text-center">Navegación Autónoma</h3>
+                <p class="text-cyan-100 text-center">Desarrollo de sistemas avanzados de navegación y mapeo para entornos complejos y dinámicos.</p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-blue-600 transition-all duration-300 flex flex-col h-full">
-                <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mb-6 mx-auto transform hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-microchip text-2xl text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Inteligencia Artificial</h3>
-                <p class="text-gray-600 text-center">Implementación de sistemas de IA para optimización y toma de decisiones en tiempo real.</p>
+                <h3 class="text-xl font-bold text-[#00FFFF] mb-3 text-center">Inteligencia Artificial</h3>
+                <p class="text-cyan-100 text-center">Implementación de sistemas de IA para optimización y toma de decisiones en tiempo real.</p>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-blue-600 transition-all duration-300 flex flex-col h-full">
-                <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.4s;">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mb-6 mx-auto transform hover:scale-110 transition-transform duration-300">
                     <i class="fas fa-network-wired text-2xl text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Sistemas Multi-Robot</h3>
-                <p class="text-gray-600 text-center">Investigación en coordinación y colaboración entre sistemas robóticos para tareas complejas.</p>
+                <h3 class="text-xl font-bold text-[#00FFFF] mb-3 text-center">Sistemas Multi-Robot</h3>
+                <p class="text-cyan-100 text-center">Investigación en coordinación y colaboración entre sistemas robóticos para tareas complejas.</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Faculty Directors Section -->
-<div class="bg-white py-24 sm:py-32">
+<div class="bg-[#000022] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center mb-16">
-            <h2 class="text-base font-semibold leading-7 text-blue-600">Dirección Académica</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Liderazgo y Visión</p>
-            <div class="w-16 h-1 bg-blue-600 mx-auto my-4"></div>
-            <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Nuestros directores académicos lideran la innovación y el desarrollo en robótica móvil con experiencia y visión de futuro.</p>
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Dirección Académica</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Liderazgo y Visión</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Nuestros directores académicos lideran la innovación y el desarrollo en robótica móvil con experiencia y visión de futuro.</p>
         </div>
 
         <div class="flex justify-center">
             <!-- Director Profile Card - Centered and Enhanced -->
-            <div class="group relative bg-gradient-to-br from-white to-blue-50 p-10 rounded-xl shadow-lg hover:shadow-2xl border-b-4 border-blue-600 transition-all duration-300 max-w-xl transform hover:-translate-y-2">
+            <div class="group relative bg-[#001133] shadow-xl rounded-lg p-10 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 max-w-xl transform hover:-translate-y-2 animate-fade-in-up">
                 <div class="flex flex-col items-center">
-                    <div class="h-40 w-40 rounded-full bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                    <div class="h-40 w-40 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300 shadow-lg">
                         <i class="fas fa-user text-5xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Rubin</h3>
-                    <div class="w-24 h-1 bg-blue-600 mx-auto my-3"></div>
-                    <p class="text-blue-700 text-lg font-semibold mb-4">Director de Investigación</p>
-                    <p class="text-gray-700 text-center mb-6 text-lg">Especialista en sistemas de navegación autónoma con más de 15 años de experiencia en el campo. Líder visionario en el desarrollo de tecnologías robóticas avanzadas.</p>
+                    <h3 class="text-2xl font-bold text-white mb-2">Dr. Rubin</h3>
+                    <div class="w-24 h-1 bg-[#00FFFF] mx-auto my-3"></div>
+                    <p class="text-cyan-300 text-lg font-semibold mb-4">Director de Investigación</p>
+                    <p class="text-cyan-100 text-center mb-6 text-lg">Especialista en sistemas de navegación autónoma con más de 15 años de experiencia en el campo. Líder visionario en el desarrollo de tecnologías robóticas avanzadas.</p>
                     <div class="flex space-x-6">
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors"><i class="fas fa-globe text-2xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fas fa-envelope text-2xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fas fa-globe text-2xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -128,60 +164,60 @@
 </div>
 
 <!-- Engineers Section -->
-<div class="bg-gradient-to-b from-gray-50 to-gray-100 py-24 sm:py-32">
+<div class="bg-[#000044] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center mb-16">
-            <h2 class="text-base font-semibold leading-7 text-blue-600">Ingenieros Investigadores</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Experiencia y Conocimiento</p>
-            <div class="w-16 h-1 bg-blue-600 mx-auto my-4"></div>
-            <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Nuestros ingenieros son expertos en sus campos, dedicados a la investigación y desarrollo de tecnologías robóticas avanzadas.</p>
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Ingenieros Investigadores</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">Experiencia y Conocimiento</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Nuestros ingenieros son expertos en sus campos, dedicados a la investigación y desarrollo de tecnologías robóticas avanzadas.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             <!-- Engineer Profile Card -->
-            <div class="group relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-transparent hover:border-blue-600 transition-all duration-300">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up">
                 <div class="flex flex-col items-center">
-                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                         <i class="fas fa-user text-4xl text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ing. Carlos García</h3>
-                    <p class="text-blue-600 mb-4">Ingeniero de Sistemas Robóticos</p>
-                    <p class="text-gray-600 text-center mb-6">Especialista en desarrollo de software para sistemas robóticos y algoritmos de control.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Ing. Carlos García</h3>
+                    <p class="text-cyan-300 mb-4">Ingeniero de Sistemas Robóticos</p>
+                    <p class="text-cyan-100 text-center mb-6">Especialista en desarrollo de software para sistemas robóticos y algoritmos de control.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-github text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
                     </div>
                 </div>
             </div>
             
             <!-- Engineer Profile Card -->
-            <div class="group relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-transparent hover:border-blue-600 transition-all duration-300">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="animation-delay: 0.2s;">
                 <div class="flex flex-col items-center">
-                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                         <i class="fas fa-user text-4xl text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ing. Laura Sánchez</h3>
-                    <p class="text-blue-600 mb-4">Ingeniera de Hardware Robótico</p>
-                    <p class="text-gray-600 text-center mb-6">Especializada en diseño y desarrollo de componentes electrónicos para sistemas robóticos avanzados.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Ing. Laura Sánchez</h3>
+                    <p class="text-cyan-300 mb-4">Ingeniera de Hardware Robótico</p>
+                    <p class="text-cyan-100 text-center mb-6">Especializada en diseño y desarrollo de componentes electrónicos para sistemas robóticos avanzados.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-github text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
                     </div>
                 </div>
             </div>
             
             <!-- Engineer Profile Card -->
-            <div class="group relative bg-white p-8 rounded-xl shadow-md hover:shadow-xl border-b-4 border-transparent hover:border-blue-600 transition-all duration-300">
+            <div class="bg-[#001133] shadow-xl rounded-lg p-8 border border-[#004466] hover:border-[#00FFFF] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-300 hover:-translate-y-2 animate-fade-in-up" style="animation-delay: 0.4s;">
                 <div class="flex flex-col items-center">
-                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                    <div class="h-32 w-32 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                         <i class="fas fa-user text-4xl text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ing. Miguel Rodríguez</h3>
-                    <p class="text-blue-600 mb-4">Ingeniero de IA y Aprendizaje Automático</p>
-                    <p class="text-gray-600 text-center mb-6">Desarrollador de algoritmos de aprendizaje profundo para sistemas de percepción robótica.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Ing. Miguel Rodríguez</h3>
+                    <p class="text-cyan-300 mb-4">Ingeniero de IA y Aprendizaje Automático</p>
+                    <p class="text-cyan-100 text-center mb-6">Desarrollador de algoritmos de aprendizaje profundo para sistemas de percepción robótica.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-github text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -190,13 +226,13 @@
 </div>
 
 <!-- Students Section -->
-<div class="bg-white py-24 sm:py-32">
+<div class="bg-[#000022] py-24 sm:py-32 shadow-inner">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center mb-16">
-            <h2 class="text-base font-semibold leading-7 text-blue-600">Estudiantes Investigadores</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">El Futuro de la Robótica</p>
-            <div class="w-16 h-1 bg-blue-600 mx-auto my-4"></div>
-            <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Nuestros estudiantes son la próxima generación de innovadores en robótica móvil, aportando ideas frescas y perspectivas únicas.</p>
+        <div class="mx-auto max-w-2xl text-center mb-16 animate-fade-in">
+            <h2 class="text-base font-semibold leading-7 text-[#00FFFF]">Estudiantes Investigadores</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl glow-text">El Futuro de la Robótica</p>
+            <div class="w-16 h-1 bg-[#00FFFF] mx-auto my-4"></div>
+            <p class="mt-6 text-lg leading-8 text-cyan-100 max-w-2xl mx-auto">Nuestros estudiantes son la próxima generación de innovadores en robótica móvil, aportando ideas frescas y perspectivas únicas.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
