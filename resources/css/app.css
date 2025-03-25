@@ -12,4 +12,11 @@
 }
 
 
-
+.carousel-item {
+    transition: all 0.5s ease;
+}
+    
+.carousel-track {
+    display: flex;
+    will-change: transform;
+}

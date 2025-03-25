@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const items = carousel.querySelectorAll(".carousel-item");
     let currentIndex = 0;
+    const track = document.querySelector('.carousel-track');
+    const itemWidth = items[0].offsetWidth;
+    const visibleItems = Math.floor(track.offsetWidth / itemWidth);
 
     function updateCarousel(newIndex) {
         items.forEach((item, index) => {
@@ -34,14 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.classList.remove("opacity-0", "translate-x-full", "-translate-x-full");
                 item.classList.add("opacity-100", "translate-x-0");
             } else if (index < newIndex) {
-                item.classList.remove("opacity-0", "translate-x-full", "translate-x-0");
+                item.classList.remove("opacity-100", "translate-x-full", "translate-x-0");
                 item.classList.add("opacity-0", "-translate-x-full");
             } else {
-                item.classList.remove("opacity-100", "translate-x-0", "-translate-x-full");
+                item.classList.remove("opacity-100", "translate-x-full", "-translate-x-full");
                 item.classList.add("opacity-0", "translate-x-full");
             }
         });
         currentIndex = newIndex;
+        const offset = -currentIndex * itemWidth + (track.offsetWidth / 2 - itemWidth / 2);
+        track.style.transform = `translateX(${offset}px)`;
     }
 
     const prevBtn = document.getElementById("prevBtn");
@@ -61,9 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Auto-advance the carousel every 5 seconds
+    // Auto-advance the carousel every 10 seconds
     setInterval(() => {
         const newIndex = (currentIndex + 1) % items.length;
         updateCarousel(newIndex);
-    }, 5000);
+    }, 10000);
+
+    
+    updateCarousel(0);
 });
