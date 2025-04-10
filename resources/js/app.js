@@ -19,3 +19,97 @@ document.addEventListener('DOMContentLoaded', function () {
     })
         
     });
+
+// Carousel Animation
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel");
+    if (!carousel) return;
+
+    const items = carousel.querySelectorAll(".carousel-item");
+    let currentIndex = 0;
+    const track = document.querySelector('.carousel-track');
+    const itemWidth = items[0].offsetWidth;
+    const visibleItems = Math.floor(track.offsetWidth / itemWidth);
+
+    function updateCarousel(newIndex) {
+        items.forEach((item, index) => {
+            if (index === newIndex) {
+                item.classList.remove("opacity-0", "translate-x-full", "-translate-x-full");
+                item.classList.add("opacity-100", "translate-x-0");
+            } else if (index < newIndex) {
+                item.classList.remove("opacity-100", "translate-x-full", "translate-x-0");
+                item.classList.add("opacity-0", "-translate-x-full");
+            } else {
+                item.classList.remove("opacity-100", "translate-x-full", "-translate-x-full");
+                item.classList.add("opacity-0", "translate-x-full");
+            }
+        });
+        currentIndex = newIndex;
+        const offset = -currentIndex * itemWidth + (track.offsetWidth / 2 - itemWidth / 2);
+        track.style.transform = `translateX(${offset}px)`;
+    }
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            const newIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel(newIndex);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            const newIndex = (currentIndex + 1) % items.length;
+            updateCarousel(newIndex);
+        });
+    }
+
+    // Auto-advance the carousel every 10 seconds
+    setInterval(() => {
+        const newIndex = (currentIndex + 1) % items.length;
+        updateCarousel(newIndex);
+    }, 10000);
+
+    
+    updateCarousel(0);
+});
+
+// Animate Statistics Counters
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the faster
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => animateCounter(counter), 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        observer.observe(counter);
+    });
+});
+
